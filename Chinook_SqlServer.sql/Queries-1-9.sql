@@ -37,13 +37,23 @@ SELECT i.Total, c.FirstName, c.LastName, i.BillingCountry, e.EmployeeId, e.First
 	INNER JOIN Employee e ON c.SupportRepId = e.EmployeeId;
 
 --8.
-SELECT SUM(i.InvoiceId)
-	FROM Invoice i
-	WHERE i.InvoiceDate BETWEEN '20110101 00:00:00 AM'
-		AND '20090101 00:00:00 AM';
+--2009 + 2011 Invoices
+SELECT
+	SUM(CASE WHEN i.InvoiceDate BETWEEN '20090101 00:00:00 AM'
+		AND '20100101 00:00:00 AM' THEN 1 ELSE 0 END) AS 'TwoThousandNine',
+	SUM(CASE WHEN i.InvoiceDate BETWEEN '20110101 00:00:00 AM'
+		AND '20120101 00:00:00 AM' THEN 1 ELSE 0 END) AS 'TwoThousandEleven'
+FROM Invoice i;
+
 
 --9.
+--2009
 SELECT SUM(i.InvoiceId)
 	FROM Invoice i
+	WHERE i.InvoiceDate BETWEEN '20090101 00:00:00 AM'
+		AND '20100101 00:00:00 AM';
+--2011
+SELECT Sum(i.InvoiceId)
+	FROM Invoice i
 	WHERE i.InvoiceDate BETWEEN '20110101 00:00:00 AM'
-		AND '20090101 00:00:00 AM';
+		AND '20120101 00:00:00 AM';
