@@ -1,0 +1,19 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 14.00
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Chinook_SqlServer.sql", "Chinook_SqlServer.sql\Chinook_SqlServer.sql.ssmssqlproj", "{BBB42FF6-9ED3-4A08-9BBD-ED72639C1F0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBB42FF6-9ED3-4A08-9BBD-ED72639C1F0C}.Default|Default.ActiveCfg = Default
+		{4D6525C6-3561-4569-A722-B2E97F36C4CF}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
